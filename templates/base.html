@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>ML - Home Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}"/>
+        {% endblock %}
+    </head>
+    
+    <body>
+    <!-- {% block body %} -->
+
+    <!-- <div class="container-fluid text-center top-container">
+        <img src="{{ url_for('static',filename='images/uta-logo-200.png') }}">
+    </div> -->
+    <div class="container">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+        {% block scripts %}
+
+        {% endblock %}
+
+        {% include "includes/footer.html" %}
+
+    <!-- {% endblock %} -->
+    </body>
+</html>
